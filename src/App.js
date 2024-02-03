@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Home from './components/Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './components/About';
+import Contact from './components/Contact';
+import { Provider, useSelector } from 'react-redux';
+import Store from './utils/Store';
 
 function App() {
+  const theme= useSelector((store)=>store.theme.themes);
+  console.log(theme);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className={'overflow-hidden box-border h-screen ' + (theme ? "bg-zinc-900" : "bg-white")}>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+      </div>
   );
 }
 
