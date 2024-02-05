@@ -18,10 +18,12 @@ const Header = () => {
   const themeSelect = useSelector((store) => store.theme.themes);
   const dispatch = useDispatch();
   
+  const bgColorClass =
+  themeSelect == true ? "bg-black" : "bg-white";
 
   return (
     // <div>
-      <nav  className="shadow-lg fixed top-0 right-0 z-50 left-0 bg-white">
+      <nav  className={`shadow-lg fixed top-0 right-0 z-50 left-0 ${bgColorClass}`}>
         <div className="flex justify-end">
           <div>
             <ul className="flex p-5">

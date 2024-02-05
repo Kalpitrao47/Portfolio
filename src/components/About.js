@@ -9,7 +9,7 @@ const About = () => {
     themeSelect == true ? "text-cyan-500" : "text-zinc-500";
 
   return (
-    <div id="about" className="flex flex-col items-center justify-evenly mt-20">
+    <div id="about" className="flex flex-col items-center justify-evenly ">
     <h1 className="text-3xl font-bold mt-20">About</h1>
       {/*<div className="h-full w-full flex justify-center items-center">
         <img
