@@ -22,7 +22,7 @@ const Home = () => {
 
 
   return (
-    <div className=" flex flex-col items-center overflow-y-hidden pt-4">
+    <div className=" flex flex-col items-center pt-4">
       <div>
         <img
           className="rounded-full h-40 w-40 shadow-lg shadow-zinc-400"
@@ -35,7 +35,7 @@ const Home = () => {
       <div className="flex flex-col items-center">
       <h1 className={`text-5xl ${textColorClass} mt-4`}>
       Hi, I'm{" "}
-      <ReactTyped strings={ [" Kalpit Raorane", "Frontend Developer"] } typeSpeed={100} loop />
+      <ReactTyped strings={ [" Kalpit Raorane", "a Frontend Developer"] } typeSpeed={100} loop />
     </h1>
         <h1 className={`text-3xl text-center w-[80%] ${textColorClass} p-5`}>
           Building Digital Products and Web Apps. Learning Front-End Web Development passionate about creating interactive applications and experiences on the web.

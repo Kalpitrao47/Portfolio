@@ -18,7 +18,13 @@ const Skills = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h1 className='text-gray-500 text-center p-5 text-5xl font-semibold'>Skills</h1>
+      <h1 className='text-gray-500 text-center p-5 text-5xl font-semibold text-dark
+      mb-6
+      uppercase
+      text-[32px]
+      sm:text-[40px]
+      lg:text-[36px]
+      xl:text-[40px]'>SKILLS</h1>
       <div className='flex text-gray-400 justify-center gap-10 shadow-md shadow-cyan-500 mb-5  py-5 items-center w-fit px-5 m-auto rounded-full'>
       <img className='h-20 w-20 ' src={MyIcon} alt='html logo'/>
       <img className='h-20 w-20' src={CssIcon} alt='css logo'/>

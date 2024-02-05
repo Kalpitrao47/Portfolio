@@ -12,7 +12,7 @@ function App() {
   const theme= useSelector((store)=>store.theme.themes);
   console.log(theme);
   return (
-    <div className={'overflow-hidden box-border h-screen ' + (theme ? "bg-zinc-900" : "bg-white")}>
+    <div className={' box-border h-screen ' + (theme ? "bg-zinc-900" : "bg-white")}>
       <Router>
         <Header/>
         <Routes>
