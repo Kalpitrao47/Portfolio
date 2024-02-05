@@ -9,14 +9,15 @@ const About = () => {
     themeSelect == true ? "text-cyan-500" : "text-zinc-500";
 
   return (
-    <div className="flex items-center justify-evenly">
-      <div className="h-full w-full ">
+    <div id="about" className="flex flex-col items-center justify-evenly mt-20">
+    <h1 className="text-3xl font-bold mt-20">About</h1>
+      {/*<div className="h-full w-full flex justify-center items-center">
         <img
-          className="rounded-full"
+          className={`rounded-full ${textColorClass} shadow-lg shadow-zinc-400 h-40 w-40`}
           src="https://media.licdn.com/dms/image/C4D03AQG0o6D-aWbSVA/profile-displayphoto-shrink_100_100/0/1656344845426?e=1712188800&amp;v=beta&amp;t=3dGVoQcJOutZuzXC1HxZqmtOmOXhWgUJO-k9XDXn0UM"
           alt="Visit profile for Kalpit Raorane"
         ></img>
-      </div>
+      </div>*/}
       <div className={`text-2xl text-center w-[80%] ${textColorClass} p-5`}>
         <h1>
           A Frontend Developer from Mumbai. Have strong experience in developing

@@ -7,6 +7,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useDispatch, useSelector } from "react-redux";
 import { themeSelector } from "../utils/ThemeSlice";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   const handleTheme = () => {
@@ -16,33 +17,41 @@ const Header = () => {
 
   const themeSelect = useSelector((store) => store.theme.themes);
   const dispatch = useDispatch();
+  
 
   return (
     // <div>
-      <nav  className="shadow-lg">
+      <nav  className="shadow-lg fixed top-0 right-0 z-50 left-0 bg-white">
         <div className="flex justify-end">
           <div>
             <ul className="flex p-5">
               <li>
-                <Link className="text-cyan-500 mr-5 font-medium text-lg  " to="/">
-                  Home
-                </Link>
+              {/*
+            <Link className="text-cyan-500 mr-5 font-medium text-lg  " to="/">*/}
+                <AnchorLink className="text-cyan-500 mr-5 font-medium text-lg  " href="#home"> Home</AnchorLink>
+
+                 {/*
+                </Link>*/}
+              </li>
+
+              <li>
+              {/*
+            <Link className="text-cyan-500 mr-5 font-medium text-lg  " to="/">*/}
+                <AnchorLink className="text-cyan-500 mr-5 font-medium text-lg  " href="#about"> About</AnchorLink>
+
+                 {/*
+                </Link>*/}
+              </li>
+             
+              <li>
+                
+                <AnchorLink className="text-cyan-500 mr-5 font-medium text-lg  " href="#contact"> Contact</AnchorLink>
+             
               </li>
               <li>
-                <Link
-                  className="text-cyan-500 mr-5 font-medium text-lg "
-                  to="/about"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-cyan-500 mr-5 font-medium text-lg "
-                  to="/contact"
-                >
-                  Contact
-                </Link>
+                
+                <AnchorLink className="text-cyan-500 mr-5 font-medium text-lg  " href="#projects"> Projects</AnchorLink>
+                
               </li>
             </ul>
           </div>

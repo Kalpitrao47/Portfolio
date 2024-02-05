@@ -9,7 +9,7 @@ const Contact = () => {
     themeSelect == true ? "bg-orange-600" : "text-zinc-500";
 
   return (
-    <div  className={`${textColorClass} p-5`}>
+    <div id='contact' className={`${textColorClass} p-5`}>
     <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
    <div class="container">
       <div class="flex flex-wrap lg:justify-between -mx-4">

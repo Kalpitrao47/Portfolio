@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Skills from "./Skills";
 import { ReactTyped } from "react-typed";
 import { useDispatch, useSelector } from "react-redux";
+import Welcome from "./Welcome";
 
 
 const Home = () => {
@@ -22,10 +23,10 @@ const Home = () => {
 
 
   return (
-    <div className=" flex flex-col items-center pt-4">
+    <div id="home" className=" flex flex-col items-center pt-4 ">
       <div>
         <img
-          className="rounded-full h-40 w-40 shadow-lg shadow-zinc-400"
+          className="rounded-full h-40 w-40 shadow-lg shadow-zinc-400 mt-20"
           src="https://media.licdn.com/dms/image/C4D03AQG0o6D-aWbSVA/profile-displayphoto-shrink_100_100/0/1656344845426?e=1712188800&amp;v=beta&amp;t=3dGVoQcJOutZuzXC1HxZqmtOmOXhWgUJO-k9XDXn0UM"
           alt="Visit profile for Kalpit Raorane"
         >
@@ -45,6 +46,7 @@ const Home = () => {
         </h2>
       </div>
       <Skills />
+      <Welcome/>
     </div>
   );
 };
