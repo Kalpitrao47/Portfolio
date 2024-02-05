@@ -19,18 +19,18 @@ const Header = () => {
 
   return (
     // <div>
-      <nav  className="shadow shadow-lg">
+      <nav  className="shadow-lg">
         <div className="flex justify-end">
           <div>
             <ul className="flex p-5">
               <li>
-                <Link className="mr-5 font-medium text-lg text-gray-400" to="/">
+                <Link className="text-cyan-500 mr-5 font-medium text-lg  " to="/">
                   Home
                 </Link>
               </li>
               <li>
                 <Link
-                  className=" mr-5 font-medium text-lg text-gray-400"
+                  className="text-cyan-500 mr-5 font-medium text-lg "
                   to="/about"
                 >
                   About
@@ -38,7 +38,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  className=" mr-5 font-medium text-lg text-gray-400"
+                  className="text-cyan-500 mr-5 font-medium text-lg "
                   to="/contact"
                 >
                   Contact
@@ -48,14 +48,14 @@ const Header = () => {
           </div>
           <div className="flex p-3">
             <Link
-              className=" mr-5 font-medium text-lg text-gray-400"
+              className=" mr-5 font-medium text-lg text-cyan-500"
               to="https://www.linkedin.com/in/kalpit-raorane-256949188/"
             >
               <img className="h-10 w-10 " src={LinkedInIcon} alt="html logo" />
             </Link>
 
             <Link
-              className=" mr-5 font-medium text-lg text-gray-400"
+              className=" mr-5 font-medium text-lg text-cyan-500"
               to="https://github.com/Kalpitrao47"
             >
               <GitHubIcon style={{ fontSize: "2.5rem" }}/>{" "}
