@@ -1,131 +1,144 @@
 import React from "react";
+import Netflix from "../Icons/Netflix.png";
+import Youtube from "../Icons/Youtube.png";
+
+import { useDispatch, useSelector } from "react-redux";
 
 const Projects = () => {
-  return (
-    <div id="projects" className="flex flex-col justify-center items-center">
-      <div>
-        <h1 className="text-2xl font-bold mb-5">Projects</h1>
-      </div>
+  const themeSelect = useSelector((store) => store.theme.themes);
+  const dispatch = useDispatch();
 
-      <div class="flex font-sans">
-        <div class="flex-none w-48 relative">
-          <img
-            src="/classic-utility-jacket.jpg"
-            alt=""
-            class="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
-            className="w-full h-full"
-          />
-        </div>
-        <form class="flex-auto p-6">
-          <div class="flex flex-wrap">
-            <h1 class="flex-auto text-lg font-semibold text-slate-900">
-              Utility Jacket
-            </h1>
-            <div class="text-lg font-semibold text-slate-500">$110.00</div>
-            <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
-              In stock
-            </div>
-          </div>
-          <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
-            <div class="space-x-2 flex text-sm">
-              <label>
-                <input
-                  class="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="xs"
-                  checked
-                />
-                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-                  XS
-                </div>
-              </label>
-              <label>
-                <input
-                  class="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="s"
-                />
-                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-                  S
-                </div>
-              </label>
-              <label>
-                <input
-                  class="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="m"
-                />
-                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-                  M
-                </div>
-              </label>
-              <label>
-                <input
-                  class="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="l"
-                />
-                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-                  L
-                </div>
-              </label>
-              <label>
-                <input
-                  class="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="xl"
-                />
-                <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-                  XL
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class="flex space-x-4 mb-6 text-sm font-medium">
-            <div class="flex-auto flex space-x-4">
-              <button
-                class="h-10 px-6 font-semibold rounded-md bg-black text-white"
-                type="submit"
-              >
-                Buy now
-              </button>
-              <button
-                class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900"
-                type="button"
-              >
-                Add to bag
-              </button>
-            </div>
-            <button
-              class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
-              type="button"
-              aria-label="Like"
-            >
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                />
-              </svg>
-            </button>
-          </div>
-          <p class="text-sm text-slate-700">
-            Free shipping on all continental US orders.
+  const textColorClass =
+    themeSelect == true ? "text-cyan-500" : "text-zinc-500";
+
+  const theme = useSelector((store) => store.theme.themes);
+  console.log(theme);
+
+  const bgColorClass = themeSelect == true ? "bg-zinc-900" : "bg-white";
+
+  return (
+    <div
+      id="projects"
+      className={`flex flex-col justify-center items-center ${bgColorClass} ${textColorClass}`}
+    >
+      <h1 className="text-3xl font-bold mt-20">Projects</h1>
+      <a
+        href="#"
+        class="flex flex-col mt-20 mr-32 items-center bg-zinc-900 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <img
+          class="object-cover w-full rounded-t-lg h-fit md:h-auto md:w-fit md:rounded-none md:rounded-s-lg"
+          src={Netflix}
+          alt=""
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5
+            class={`mb-2 text-2xl font-bold tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Netflix GPT
+          </h5>
+          <h5
+            class={`mb-2 text-xl font-bold tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Technologies Used: Html,Css,Javascript,React.js,Tailwind
+            Css,FireBase.
+          </h5>
+          <p
+            class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Developed and maintain a scalable,performant, fast-loading streaming
+            platform like Netflix.
           </p>
-        </form>
-      </div>
+          <p
+            class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Strategically implemented Webpack bundler, leading to a remarkable
+            boost in response time.
+          </p>
+          <p
+            class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Boosts User experience by using memoization, code splitting and
+            reusable component.
+          </p>
+
+          <p
+            class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Craft secure and seamless Authentication services by using Firebase.
+          </p>
+
+          <p
+            class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Smart Search with OpenAI forintelligent movie searches based on the
+            keywords you type.
+          </p>
+
+          <div className="flex">
+            <div>
+              <a
+                href="https://netflix-ni069o0ev-kalpit-raoranes-projects.vercel.app/browse"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="border rounded-lg p-2 mr-2">
+                  Live Demo
+                </button>
+              </a>
+              <a
+                href="https://react-youtube-eta-pearl.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="border rounded-lg p-2 mr-2">
+                  Github Link
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a
+        href="#"
+        class="flex flex-col  mt-20 mr-32 items-center bg-zinc-900 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <img
+          class="object-cover w-full rounded-t-lg h-fit md:h-auto md:w-fit md:rounded-none md:rounded-s-lg"
+          src={Youtube}
+          alt=""
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5
+            class={`mb-2 ${textColorClass} text-2xl font-bold tracking-tight dark:text-white`}
+          >
+            Youtube Web App
+          </h5>
+          <h5
+            class={`mb-2 text-xl font-bold tracking-tight ${textColorClass} dark:text-white`}
+          >
+            Technologies Used: Html,Css,Javascript,React.js,Tailwind Css.
+          </h5>
+          <p class={`mb-3 font-normal ${textColorClass} dark:text-gray-400`}>
+            Executed a YouTube Clone, the video-sharing platform integrating
+            real-time updates using Redux-Toolkit.
+          </p>
+          <p class={`mb-3 font-normal ${textColorClass} dark:text-gray-400`}>
+            It offers live chat demo using the concept of API polling and the
+            ability to watch videos.
+          </p>
+          <p class={`mb-3 font-normal ${textColorClass} dark:text-gray-400`}>
+            It implements efficient search autocomplete using debouncing,
+            providing real-time suggestions.
+          </p>
+
+          <div className="flex">
+            <button className="border rounded-lg p-2 mr-2">Live Demo</button>
+            <button className="border rounded-lg p-2 mr-2">Github Link</button>
+          </div>
+        </div>
+      </a>
     </div>
   );
 };

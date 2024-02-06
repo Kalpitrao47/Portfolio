@@ -6,11 +6,14 @@ const Contact = () => {
   const dispatch = useDispatch();
 
   const textColorClass =
-    themeSelect == true ? "bg-orange-600" : "text-zinc-500";
+    themeSelect == true ? "text-cyan-500" : "text-zinc-500";
+
+    const bgColorClass =
+  themeSelect == true ? "bg-zinc-900" : "bg-white";
 
   return (
-    <div id='contact' className={`${textColorClass} p-5`}>
-    <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
+    <div id='contact' className={`${textColorClass} ${bgColorClass} p-5`}>
+    <section class={`bg-white py-20 p-10 lg:py-[120px] overflow-hidden relative z-10 ${bgColorClass} ${textColorClass}`}>
    <div class="container ">
       <div class="flex flex-wrap lg:justify-between -mx-4">
          <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
@@ -40,8 +43,8 @@ const Contact = () => {
 
             </div>
          </div>
-         <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
-            <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
+         <div class={`rounded-xl w-full lg:w-1/2 xl:w-5/12 px-4 ${bgColorClass} ${textColorClass}`}>
+            <div class={`${bgColorClass} relative rounded-lg p-8 sm:p-12 shadow-lg`}>
                <form>
                   <div class="mb-6">
                      <input

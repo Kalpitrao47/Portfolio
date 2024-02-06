@@ -7,8 +7,8 @@ const Welcome = () => {
   return (
     <div>
       <About/>
-      <Contact/>
       <Projects/>
+      <Contact/>
     </div>
   )
 }
