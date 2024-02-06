@@ -8,8 +8,15 @@ const About = () => {
   const textColorClass =
     themeSelect == true ? "text-cyan-500" : "text-zinc-500";
 
+    const theme= useSelector((store)=>store.theme.themes);
+  console.log(theme);
+
+
+  const bgColorClass =
+  themeSelect == true ? "bg-zinc-900" : "bg-white";
+
   return (
-    <div id="about" className="flex flex-col items-center justify-evenly ">
+    <div id="about" className={`flex flex-col items-center justify-evenly ${bgColorClass} ${textColorClass}`}>
     <h1 className="text-3xl font-bold mt-20">About</h1>
       {/*<div className="h-full w-full flex justify-center items-center">
         <img

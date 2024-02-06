@@ -19,7 +19,6 @@ const Skills = () => {
   return (
     <div>
       <h1 className='text-gray-500 text-center p-5 text-5xl font-semibold text-dark
-      mb-6
       uppercase
       text-[32px]
       sm:text-[40px]
