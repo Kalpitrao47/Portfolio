@@ -3,6 +3,7 @@ import Skills from "./Skills";
 import { ReactTyped } from "react-typed";
 import { useDispatch, useSelector } from "react-redux";
 import Welcome from "./Welcome";
+import Dummy from "./Dummy";
 
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
       </div>
       <Skills />
       <Welcome/>
+      <Dummy/>
     </div>
   );
 };

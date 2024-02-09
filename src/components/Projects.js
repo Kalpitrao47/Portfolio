@@ -133,6 +133,8 @@ const Projects = () => {
             providing real-time suggestions.
           </p>
 
+          
+
           <div className="flex">
             <button className="border rounded-lg p-2 mr-2">Live Demo</button>
             <button className="border rounded-lg p-2 mr-2">Github Link</button>
