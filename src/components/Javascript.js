@@ -152,5 +152,33 @@
 
 // noString(arr);
 
+// 8.	loop an array of objects and remove all objects wgich don't have gender's value male
 
-// 8. Loop an array of objects and remove all objects which don't have gender's value male.
+const arr = [
+    {name:'vijay',gender:'male'},
+    {name:'vijiya',gender:'female'},
+    {name:'chandu',gender:'male'},
+    {name:'harshita',gender:'female'},
+    {name:'vinod',gender:'male'}
+    ]
+    
+    // const result = arr.filter((item)=>{
+    //     if(item.gender=='male'){
+    //         return item
+    //     }
+    // })
+
+    // console.log(result);
+
+    function male(arr){
+        for (let i = 0;i<arr.length;i++){
+            console.log(arr[i]);
+            if(arr.gender !='male'){
+                return arr;
+            }
+            }
+    
+    }
+console.log(male(arr));    
+
+
