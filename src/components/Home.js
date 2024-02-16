@@ -48,7 +48,7 @@ const Home = () => {
       </div>
       <Skills />
       <Welcome/>
-      <Dummy/>
+      {/*<Dummy/>*/}
     </div>
   );
 };
