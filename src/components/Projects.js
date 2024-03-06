@@ -1,8 +1,9 @@
 import React from "react";
 import Netflix from "../Icons/Netflix.png";
 import Youtube from "../Icons/Youtube.png";
-
+import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
+
 
 const Projects = () => {
   const themeSelect = useSelector((store) => store.theme.themes);
@@ -22,6 +23,7 @@ const Projects = () => {
       className={`flex flex-col justify-center items-center ${bgColorClass} ${textColorClass}`}
     >
       <h1 className="text-3xl font-bold mt-20">Projects</h1>
+
       <a
         href="#"
         class="flex flex-col mt-20 mr-32 items-center bg-zinc-900 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl  dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
@@ -43,18 +45,21 @@ const Projects = () => {
             Technologies Used: Html,Css,Javascript,React.js,Tailwind
             Css,FireBase.
           </h5>
+          
           <p
             class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
           >
             Developed and maintain a scalable,performant, fast-loading streaming
             platform like Netflix.
           </p>
+
           <p
             class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
           >
             Strategically implemented Webpack bundler, leading to a remarkable
             boost in response time.
           </p>
+
           <p
             class={`mb-2 text-sm font-normal tracking-tight ${textColorClass} dark:text-white`}
           >
@@ -77,6 +82,7 @@ const Projects = () => {
 
           <div className="flex">
             <div>
+
               <a
                 href="https://netflix-ni069o0ev-kalpit-raoranes-projects.vercel.app/browse"
                 target="_blank"
@@ -86,6 +92,7 @@ const Projects = () => {
                   Live Demo
                 </button>
               </a>
+
               <a
                 href="https://react-youtube-eta-pearl.vercel.app/"
                 target="_blank"
@@ -95,6 +102,7 @@ const Projects = () => {
                   Github Link
                 </button>
               </a>
+
             </div>
           </div>
         </div>
@@ -141,6 +149,7 @@ const Projects = () => {
           </div>
         </div>
       </a>
+
     </div>
   );
 };
